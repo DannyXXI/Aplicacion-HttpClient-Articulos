@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "7c266d4a-afbe-493a-accd-41381aead982",
+		"name": "Articles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2554480"
+	},
+	"item": [
+		{
+			"name": "Lista",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Article 1\",\r\n    \"description\": \"Article 1 description\",\r\n    \"body\": \"Content Article 1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Article",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Article 1 update\",\r\n    \"description\": \"Article 1 description update\",\r\n    \"body\": \"Content Article 1 update\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/cfe004b6-6ded-4fd8-aec9-1db6bf1dd220",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"cfe004b6-6ded-4fd8-aec9-1db6bf1dd220"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/cfe004b6-6ded-4fd8-aec9-1db6bf1dd220",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"cfe004b6-6ded-4fd8-aec9-1db6bf1dd220"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
