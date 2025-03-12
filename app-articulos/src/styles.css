@@ -1,0 +1,27 @@
+.añadir {
+    background-color: rgb(195, 235, 253);
+    font-weight: bold;
+}
+            
+.editar{
+    background-color: rgb(203, 247, 174);
+    font-weight: bold;
+}
+            
+.eliminar{            
+    background-color: rgb(252, 166, 166);           
+    font-weight: bold;        
+}
+
+.input-group-text{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.form-control, .form-select{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 1px solid black;
+}

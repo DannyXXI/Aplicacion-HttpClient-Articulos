@@ -1,0 +1,46 @@
+<h2 class="text-center p-1 fw-bold">APLICACIÓN DE ARTICULOS (HttpClient)</h2>
+
+<div class="p-3">
+  <form [formGroup]="formAdd" (submit)="enviarFormularioAdd($event)">
+    <h5>AÑADIR ARTICULO &nbsp;&nbsp;<button class="btn btn-info" id="añadir">Añadir&nbsp;&nbsp;<i class="bi bi-person-plus-fill"></i></button></h5>
+    <div class="input-group">
+      <label class="input-group-text añadir" for="tituloAdd">Titulo</label>
+      <input type="text" class="form-control" id="tituloAdd" placeholder="Titulo..." formControlName="title"/>
+      <label class="input-group-text añadir" for="descripcionAdd">Descripción</label>
+      <input type="text" class="form-control" id="descripcionAdd" placeholder="Descripcion..." formControlName="description"/>
+      <label class="input-group-text añadir" for="bodyAdd">Contenido</label>
+      <input type="text" class="form-control" id="bodyAdd" placeholder="Contenido..." formControlName="body"/>
+    </div>
+  </form>
+</div>
+
+<div class="p-3 mt-3">
+  <form [formGroup]="formUpdate" (submit)="enviarFormularioUpdate($event)">
+    <h5>EDITAR ARTICULO &nbsp;&nbsp;<button class="btn btn-warning" id="editar">Editar&nbsp;&nbsp;<i class="bi bi-pencil-square"></i></button></h5>
+    <div class="input-group">
+      <label class="input-group-text editar" for="idUpdate">ID</label>
+      <input type="text" class="form-control" id="idUpdate" placeholder="ID a buscar..." formControlName="id"/>
+      <label class="input-group-text editar" for="tituloUpdate">Titulo</label>
+      <input type="text" class="form-control" id="tituloUpdate" placeholder="Titulo..." formControlName="title"/>
+      <label class="input-group-text editar" for="descripcionUpdate">Descripción</label>
+      <input type="text" class="form-control" id="descripcionUpdate" placeholder="Descripcion..." formControlName="description"/>
+      <label class="input-group-text editar" for="bodyUpdate">Contenido</label>
+      <input type="text" class="form-control" id="bodyUpdate" placeholder="Contenido..." formControlName="body"/>
+    </div>
+  </form>
+</div>
+
+<div class="p-3 mt-3">
+  <form [formGroup]="formDelete" (submit)="enviarFormularioDelete($event)">
+    <h5>ELIMINAR EMPLEADO &nbsp;&nbsp;<button class="btn btn-danger text-black" id="eliminar">Eliminar&nbsp;&nbsp;<i class="bi bi-person-dash-fill"></i></button></h5>
+    <div class="input-group">
+      <label class="input-group-text eliminar" for="idDelete">ID</label>
+      <input type="text" class="form-control" id="idDelete" placeholder="ID a eliminar..." formControlName="id"/>
+    </div>
+  </form>
+</div>
+
+<div class="p-2 mt-3 text-center">
+  <button class="btn btn-success" #boton id="mostrar" (click)="mostrarArticulos()">MOSTRAR ARTICULOS&nbsp;&nbsp;<i class="bi bi-table"></i></button>
+  <div #div class="mt-2" id="tablaArticulos"></div>
+</div>
